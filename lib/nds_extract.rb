@@ -50,7 +50,7 @@ def gross_per_studio(collection)
  updated_collection = {} 
  
    while index < collection.length do 
-   # binding.pry 
+   #binding.pry 
      if !updated_collection.has_key?(collection[index][:studio]) 
         updated_collection[collection[index][:studio]] = 0 
         
@@ -86,6 +86,10 @@ set_source = [] # AoA containing source and all :movies and :director_name key
 
  def studios_totals(nds)
    a_o_a_movies_with_director_names = movies_with_directors_set(nds)
+<<<<<<< HEAD
    movies_with_director_names = flatten_a_o_a(a_o_a_movies_with_director_names)
+=======
+   movies_with_director_names = flatten_a_o_a(a_o_a_movies_with_director_names[index])
+>>>>>>> 59732326aa97e1d28dfb011239a4990a627a227f
    return gross_per_studio(movies_with_director_names)
  end
